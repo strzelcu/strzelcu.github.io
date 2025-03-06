@@ -85,6 +85,8 @@ experiences:
       - GitHub
       - GitHub Actions
       - AI
+      - Cypress
+      - Jest
 
   - role: Software Engineer
     subrole: Content Experience Platform
@@ -220,7 +222,7 @@ languages:
 preferences:
   - label: Type of work
     value: Full-time
-  - label: Employment Type
+  - label: Employment type
     value: B2B
   - label: Period
     value: Long-Term

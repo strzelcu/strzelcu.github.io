@@ -4,7 +4,7 @@ career-profile: Summary # default: Career Profile
 personality: # default: Personality
 education: # default: Education
 experience: # default: Work Experience
-achievements: # default: Achievements
+preferences: # default: Preferences
 technologies: Technologies # default: Technologies used
 interests: # default: Interests
 language: Languages # default: Language

@@ -6,11 +6,20 @@
             <div class="primary-info">
                 <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">{{ site.author }}</h1>
                 <div class="title mb-3">{{ site.tagline }}</div>
-                <ul class="list-unstyled">
+                <ul id="contact-info" class="list-unstyled">
                     <li class="mb-2"><a href="mailto:{{ header.email }}"><i class="far fa-envelope fa-fw mr-2"
                                 data-fa-transform="grow-3"></i>{{ header.email }}</a></li>
-                    <li class="mb-2"><a href="tel:{{ header.phone }}"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>{{ header.phone }}</a></li>
-                    <li><a href="#"><i class="fas fa-user-alt fa-fw mr-2" data-fa-transform="grow-6"></i>{{ header.brain }}</a></li>
+                    <script type="text/javascript">
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const phone = urlParams.get('phone');
+                        if (phone) {
+                            const ulElement = document.getElementById('contact-info');
+                            phoneLink = document.createElement('li');
+                            phoneLink.classList.add('mb-2');
+                            phoneLink.innerHTML = `<a href="tel:${phone}"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>${phone}</a>`;
+                            ulElement.appendChild(phoneLink);
+                        }
+                    </script>
                 </ul>
             </div>
             <!--//primary-info-->

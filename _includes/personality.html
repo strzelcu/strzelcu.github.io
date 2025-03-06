@@ -1,12 +1,12 @@
-{% assign awards = site.data.data.awards %}
-{% if awards %}
+{% assign personality = site.data.data.personality %}
+{% if personality %}
 <section class="resume-section reference-section mb-5">
-    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">{{ site.data.labels.awards | default: "Awards" }}</h2>
+    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">{{ site.data.labels.personality | default: "Personality" }}</h2>
     <div class="resume-section-content">
-        <ul class="list-unstyled resume-awards-list">
-            {% for award in awards %}
+        <ul class="list-unstyled resume-personality-list">
+            {% for award in personality %}
             <li class="mb-2 pl-4 position-relative">
-                <i class="resume-award-icon fas fa-trophy position-absolute"
+                <i class="resume-award-icon fas fa-hand-point-right position-absolute"
                     data-fa-transform="shrink-2"></i>
                 <div class="resume-award-name">{{ award.name }}</div>
                 <div class="resume-award-desc">{{ award.description }}</div>
@@ -15,5 +15,5 @@
         </ul>
     </div>
 </section>
-<!--//awards-section-->
+<!--//personality-section-->
 {% endif %}

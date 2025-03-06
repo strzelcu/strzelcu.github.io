@@ -2,8 +2,6 @@ header:
   # Profile information
   avatar: 1.jpg
   email: kontakt@strzelecki.opole.pl
-  phone: 502 436 700
-  brain: "INFJ, ADHD"
   website: strzelecki.opole.pl
   linkedin: tomaszstrzelecki
   github: strzelcu
@@ -14,219 +12,34 @@ header:
   codewars:
   goodreads: # Number-Username, e.g. 123456-alandoe
 
-languages:
-  - idiom: Polish
-    level: Native
-  - idiom: English
-    level: Professional
-
-interests:
-  - name: Hiking
-    link:
-  - name: Reading
-    link:
-  - name: DYI
-    link:
-
 summary: |
-  Summarise your career here. You can make a PDF version of your resume using our free Sketch template here.
-  Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  Donec quam felis, ultricies nec, pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-  Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget.
-
-education:
-  - degree: MSc in Computer Science
-    university: University of London
-    time: 2011 - 2012
-    details: |
-      Describe your study here lorem ipsum dolor sit amet, consectetuer
-      adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-      sociis natoque penatibus et magnis dis parturient montes, nascetur
-      ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-      pretium quis, sem.
-        - Bullet point
-        - Bullet point
-  - degree: BSc in Applied Mathematics
-    university: Bristol University
-    time: 2007 - 2011
-    details: |
-      Describe your study here lorem ipsum dolor sit amet, consectetuer
-      adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-      sociis natoque penatibus et magnis dis parturient montes, nascetur
-      ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-      pretium quis, sem.
-        - Bullet point
-        - Bullet point
-
-experiences:
-  - role: Lead Developer
-    time: 2018 - Present
-    company: Startup Hub
-    details: |
-      Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit.
-      Aenean commodo ligula eget dolor. Aenean massa.
-      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-      Donec pede justo, fringilla vel.
-        - Bullet point
-        - Bullet point
-    achievements:
-      desc: |
-        Praesentium voluptatum deleniti atque corrupti quos dolores et quas
-        molestias excepturi sint occaecati cupiditate non provident.
-      highlights:
-        - Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.
-        - At vero eos et accusamus et iusto odio dignissimos.
-        - Blanditiis praesentium voluptatum deleniti atque corrupti.
-        - Maecenas tempus tellus eget.
-    technologies:
-      - Angular
-      - Python
-      - jQuery
-      - Webpack
-      - HTML/SASS
-      - PostgresSQL
-
-  - role: Senior Software Developer
-    time: 2014 - 2018
-    company: Google
-    details: |
-      Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit.
-      Aenean commodo ligula eget dolor. Aenean massa.
-      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel.
-    achievements:
-      desc: |
-        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-    technologies:
-      - React
-      - Redux
-      - Django
-      - Webpack
-      - HTML/SASS
-      - MySQL
-
-  - role: Co-Founder & Lead Developer
-    time: 2012 - 2014
-    company: To-do Lists
-    details: |
-      Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit.
-      Aenean commodo ligula eget dolor. Aenean massa.
-      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec.
-
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-      Cum sociis natoque penatibus et magnis dis parturient montes.
-    technologies:
-      - Django
-      - JavaScript
-      - Node.js
-      - Require.js
-      - HTML/SASS
-
-  - role: Web Developer
-    subrole: Intern
-    time: 2011 - 2012
-    company: Amazon
-    details: |
-      Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit.
-      Aenean commodo ligula eget dolor. Aenean massa.
-      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec. Fusce vulputate eleifend sapien.
-      Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
-      Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum.
-    technologies:
-      - Ruby on Rails
-      - jQuery
-      - HTML/LESS
-      - MongoDB
-
-awards:
-  - name: Award Name Lorem
-    description: |
-      Award desc goes here, ultricies nec, pellentesque
-      eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.
-  - name: Award Name Lorem
-    description: |
-      Award desc goes here, ultricies nec, pellentesque
-      eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.
-
-# Projects are not used in this template for now
-projects:
-  title: Projects
-  intro: >
-    You can list your side projects or open source libraries in this
-    section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
-  assignments:
-    - title: Velocity
-      link: "#hook"
-      tagline: "A responsive website template designed to help startups promote, market and sell their products."
-
-    - title: DevStudio
-      link: "#"
-      tagline: "A responsive website template designed to help web developers/designers market their services."
-
-    - title: Tempo
-      link: "#"
-      tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
-
-    - title: Atom
-      link: "#"
-      tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
-
-    - title: Delta
-      link: "#"
-      tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
-
-# Publications are not used in this template for now
-publications:
-  title: Publications
-  intro: |
-    You can list your publications in this section. Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
-    bibendum fringilla a eu lectus.
-  papers:
-    - title: The Art of Computer Programming
-      link: "#"
-      authors: Donald E. Knuth
-      conference: Addison-Wesley, 1968
-
-    - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
-      link: "#"
-      authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
-      conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
-
-    - title: A syntax directed compiler for Algol 60
-      link: "#"
-      authors: Edgar T. Irons
-      conference: "Comm. ACM 4 (1961), 51–55"
+  Software Engineer with 8 years of experience, specializing in backend and frontend development.
+  Worked on content platforms for global brands and full-stack solutions in various industries.
+  Passionate about problem-solving, teamwork, and getting things done.
+  Looking for a full-time, remote B2B role, available from June 2025.
 
 skills:
   - category: Backend
     tools:
       - name: Java
         level: 90%
-      - name: Spring
-        level: 60%
       - name: AEM
-        level: 70%
+        level: 80%
+      - name: Spring
+        level: 40%
   - category: Frontend
     tools:
       - name: Angular
-        level: 30%
+        level: 35%
       - name: React
-        level: 30%
+        level: 45%
       - name: TypeScript
-        level: 40%
+        level: 70%
       - name: JavaScript
-        level: 40%
+        level: 70%
       - name: Node.js
-        level: 50%
-      - name: HTML/CSS/SASS/LESS
+        level: 60%
+      - name: HTML/CSS/SASS/LESS/TAILWIND
         level: 60%
   - category: others
     tools:
@@ -236,3 +49,190 @@ skills:
       - Docker
       - Linux
       - Figma
+      - Groovy
+      - MySQL
+      - Redis
+      - DynamoDB
+      - AWS
+      - GraphQL
+      - SonarCube
+      - SVN
+
+experiences:
+  - role: Software Engineer
+    subrole: Content Experience Platform
+    time: August 2024 - May 2025
+    company: Magnetic Point
+    details: |
+      I developed and maintained a scalable Adobe Experience Manager platform for a global
+      beverage industry leader, streamlining content management and distribution.
+    technologies:
+      - Adobe Experience Manager
+      - Adobe Cloud Manager
+      - Java 8
+      - AWS
+      - Typescript
+      - Node.js
+      - HTML
+      - CSS
+      - SASS
+      - TAILWIND
+      - React
+      - Redux
+      - Redux Toolkit
+      - Groovy
+      - Git
+      - GitHub
+      - GitHub Actions
+      - AI
+
+  - role: Software Engineer
+    subrole: Content Experience Platform
+    time: January 2023 - August 2024
+    company: Magnetic Point
+    details: |
+      I developed and maintained an Adobe Experience Manager platform for a medical sector company,
+      distributing content to 24 markets worldwide. I also integrated Algolia for advanced search
+      capabilities with customized connector written in Java.
+    technologies:
+      - Adobe Experience Manager
+      - Adobe Cloud Manager
+      - Java 8
+      - OSGI
+      - Javascript
+      - Node.js
+      - HTML
+      - CSS
+      - SASS
+      - Algolia
+      - Groovy
+      - Git
+      - GitHub
+      - Docker
+
+  - role: Software Engineer
+    subrole: Platform Management
+    time: March 2022 - December 2022
+    company: Magnetic Point
+    details: |
+      I managed and maintained 10+ client platforms using Adobe Experience Manager, Java 8, JavaScript,
+      and Node.js. Developed and optimized frontend components with HTML, CSS, SASS, and Groovy while
+      ensuring platform content integrity, stability, and performance.
+    technologies:
+      - Adobe Experience Manager
+      - Java 8
+      - Javascript
+      - Node.js
+      - HTML
+      - CSS
+      - SASS
+      - Groovy
+      - Maven
+      - Gradle
+      - Git
+      - GitHub
+      - Docker
+
+  - role: Java Application Developer
+    time: January 2019 - February 2022
+    company: Atos
+    details: |
+      I worked on a full-stack solution for a german public sector client, integrating frontend, backend,
+      and relational databases to prepare scalable solution for Kubernetes environment.
+    technologies:
+      - Java 11
+      - Spring5
+      - SpringData
+      - Hibernate
+      - RabbitMQ
+      - Oracle MySQL
+      - MSSQL
+      - Swagger
+      - REST
+      - WebServices
+      - XML
+      - Maven
+      - Git
+      - GitLab
+      - ElasticSearch
+      - JUnit
+      - Mockito
+      - Angular
+      - Typescript
+      - RxJS
+      - HTML
+      - CSS
+      - Docker
+
+  - role: webMethods Support Engineer
+    time: June 2017 - December 2018
+    company: Atos
+    details: |
+      I worked with a client in the chemical industry, utilizing a range of technologies including
+      webMethods Integration Platform for enterprise integration, Grafana for data visualization
+      and monitoring, Bash and PowerShell for scripting and automation, Groovy for custom development,
+      SVN for version control, and Linux and Windows Server as operating systems.
+    technologies:
+      - webMethods Integration Platform
+      - Grafana
+      - Elasticsearch
+      - Bash
+      - PowerShell
+      - Groovy
+      - SVN
+      - Linux
+      - Windows Server
+
+  - role: Java Developer
+    subrole: Trainee
+    time: March 2017 - June 2017
+    company: Atos
+    details: |
+      As a Trainee I completed a Java training course at Altkom Academy. The course provided
+      a comprehensive overview of Java programming, covering topics such as object-oriented
+      programming, data structures, and algorithms. As part of the course, I also obtained 
+      an Oracle certification.
+    technologies:
+      - Java 8
+      - Java EE
+      - Spring
+      - Hibernate
+
+education:
+  - degree: MSc in Computer Science
+    university: Opole University of Technology
+    time: 2017 - 2020
+  - degree: BEng in Computer Science
+    university: Opole University of Technology
+    time: 2012 - 2016
+
+personality:
+  - name: Team Player
+  - name: ADHD
+  - name: Hold-My-Beer attitude
+
+languages:
+  - idiom: Polish
+    level: Native
+  - idiom: English
+    level: Professional
+
+preferences:
+  - label: Type of work
+    value: Full-time
+  - label: Employment Type
+    value: B2B
+  - label: Period
+    value: Long-Term
+  - label: Operating mode
+    value: Remote
+  - label: Hardware
+    value: MacBook
+
+interests:
+  - name: Hiking
+    link:
+  - name: Reading
+    link:
+  - name: DYI
+    link:

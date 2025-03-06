@@ -8,8 +8,9 @@ author: Tomasz Strzelecki
 tagline: Software Engineer # Short description for jekyll-seo-tag
 description: Tomasz Strzelecki - Software Engineer # Longer description for jekyll-seo-tag
 
+domain: strzelecki.opole.pl
 url: "https://strzelcu.github.io"
-baseurl: "/strzelcu.github.io" # change it according to your repository name
+baseurl: "/strzelcu.github.io/" # change it according to your repository name
 
 social:
   links:

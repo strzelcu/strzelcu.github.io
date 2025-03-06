@@ -1,0 +1,14 @@
+{% assign preferences = site.data.data.preferences %}
+{% if preferences %}
+<section class="resume-section preferences-section mb-5">
+    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">{{ site.data.labels.preferences | default: "Preferences" }}</h2>
+    <div class="resume-section-content">
+        <ul class="list-unstyled">
+            {% for preference in preferences %}
+            <li class="mb-1"><b>{{ preference.label }}:</b> {{ preference.value }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+<!--//preferences-section-->
+{% endif %}

@@ -62,7 +62,7 @@ experiences:
   - role: Software Engineer
     subrole: Content Experience Platform
     time: August 2024 - May 2025
-    company: Magnetic Point
+    company: VML ES on behalf of Magnetic Point
     details: |
       I developed and maintained a scalable Adobe Experience Manager platform for a global
       beverage industry leader, streamlining content management and distribution.
@@ -87,11 +87,12 @@ experiences:
       - AI
       - Cypress
       - Jest
+      - Vi
 
   - role: Software Engineer
     subrole: Content Experience Platform
     time: January 2023 - August 2024
-    company: Magnetic Point
+    company: VML ES on behalf of Magnetic Point
     details: |
       I developed and maintained an Adobe Experience Manager platform for a medical sector company,
       distributing content to 24 markets worldwide. I also integrated Algolia for advanced search
@@ -115,7 +116,7 @@ experiences:
   - role: Software Engineer
     subrole: Platform Management
     time: March 2022 - December 2022
-    company: Magnetic Point
+    company: VML ES on behalf of Magnetic Point
     details: |
       I managed and maintained 10+ client platforms using Adobe Experience Manager, Java 8, JavaScript,
       and Node.js. Developed and optimized frontend components with HTML, CSS, SASS, and Groovy while

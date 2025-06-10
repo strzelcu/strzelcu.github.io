@@ -13,10 +13,9 @@ header:
   goodreads: # Number-Username, e.g. 123456-alandoe
 
 summary: |
-  Software Engineer with 8 years of experience, specializing in backend and frontend development.
-  Worked on content platforms for global brands and full-stack solutions in various industries.
+  Software Engineer with years of experience, specializing in full stack development.
+  Worked on content platforms for global brands in various industries.
   Passionate about problem-solving, teamwork, and getting things done.
-  Looking for a full-time, remote B2B role, available from June 2025.
 
 skills:
   - category: Backend
@@ -59,6 +58,14 @@ skills:
       - SVN
 
 experiences:
+  - role: Full Stack Developer
+    time: June 2025 - Now
+    company: Viessmann
+    technologies:
+      - Typescript
+      - Node.js
+      - Angular
+
   - role: Software Engineer
     subrole: Content Experience Platform
     time: August 2024 - May 2025

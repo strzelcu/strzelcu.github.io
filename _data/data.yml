@@ -2,7 +2,7 @@ header:
   # Profile information
   avatar: 1.jpg
   email: kontakt@strzelecki.opole.pl
-  website: strzelecki.opole.pl
+  website: programistanawsi.pl
   linkedin: tomaszstrzelecki
   github: strzelcu
   gitlab:
@@ -60,7 +60,7 @@ skills:
 experiences:
   - role: Full Stack Developer
     time: June 2025 - Now
-    company: Viessmann
+    company: Viessmann Climate Solutions
     technologies:
       - Typescript
       - Node.js

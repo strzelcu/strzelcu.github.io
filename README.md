@@ -38,7 +38,7 @@ yarn tsc --noEmit
 - `contentlayer.config.ts`: content schema, MDX processing, generated search index and tag counts.
 - `scripts/`: RSS generation after building.
 
-Search uses kbar; comments use Giscus. Umami optionally reads `NEXT_UMAMI_ID`. Newsletter integration is disabled; static GitHub Pages hosting cannot run a POST handler. `.env.example` lists optional inherited integrations.
+Search uses kbar with local Polish-language components in `components/SearchProvider.tsx` and `components/KBarModal.tsx`, adapted from [Pliny](https://github.com/timlrx/pliny) by Timothy Lin and contributors (MIT). The local components translate the search field, loading, empty and error states, result section, and dates. The search index and keyboard shortcuts are unchanged; comments use Giscus. Umami optionally reads `NEXT_UMAMI_ID`. Newsletter integration is disabled; static GitHub Pages hosting cannot run a POST handler. `.env.example` lists optional inherited integrations.
 
 ## Deployment and updates
 
@@ -89,6 +89,7 @@ Author names below come from upstream npm metadata; each package links to its or
 | [next](https://github.com/vercel/next.js)                                                       | 16.4.2       | vercel-release-bot, matt.straka, matheuss, zeit-bot and contributors |
 | [next-contentlayer2](https://github.com/timlrx/contentlayer2)                                   | 0.5.8        | schickling                                                           |
 | [next-themes](https://github.com/pacocoursey/next-themes)                                       | 0.4.6        | paco, trm217 and contributors                                        |
+| [kbar](https://github.com/timc1/kbar) | 0.1.0-beta.45 | Tim Chang and contributors |
 | [pliny](https://www.npmjs.com/package/pliny)                                                    | 0.4.1        | Timothy Lin                                                          |
 | [postcss](https://github.com/postcss/postcss)                                                   | 8.5.30       | Andrey Sitnik                                                        |
 | [react](https://github.com/react/react)                                                         | 19.3.1       | fb, react-bot and contributors                                       |

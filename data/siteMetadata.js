@@ -9,7 +9,7 @@ const siteMetadata = {
   siteUrl: 'https://strzelcu.github.io',
   siteRepo: 'https://github.com/strzelcu/strzelcu.github.io',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
+  socialBanner: `${process.env.BASE_PATH || ''}/static/images/programista-na-wsi-retrowave.jpg`,
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'mlody_analog3f@icloud.com',
   github: 'https://github.com/strzelcu',

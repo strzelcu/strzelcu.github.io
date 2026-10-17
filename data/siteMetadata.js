@@ -61,7 +61,7 @@ const siteMetadata = {
     provider: 'giscus', // supported providers: giscus, utterances, disqus
     giscusConfig: {
       // Visit the link below, and follow the steps in the 'configuration' section
-      repo: 'strzelcu/programistanawsi.pl',
+      repo: 'strzelcu/strzelcu.github.io',
       repositoryId: 'R_kgDOPpL-GA',
       category: 'General',
       categoryId: 'DIC_kwDOPpL-GM4CxXGS',

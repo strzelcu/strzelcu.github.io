@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Programista na wsi',
   author: 'Tomasz Strzelecki',
   headerTitle: 'Programista na wsi',
-  description: 'Codzienność, pomysły i małe odkrycia — rozgość się!',
+  description: 'Codzienność, pomysły i małe odkrycia.',
   language: 'pl-pl',
   theme: 'system', // system, dark or light
   siteUrl: 'https://strzelcu.github.io',

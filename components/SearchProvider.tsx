@@ -16,6 +16,9 @@ interface SearchDocument {
 
 export default function SearchProvider({ children }: { children: ReactNode }) {
   const router = useRouter()
+  const searchConfig = siteMetadata.search
+  const searchDocumentsPath =
+    searchConfig?.provider === 'kbar' ? searchConfig.kbarConfig.searchDocumentsPath : false
   const [actions, setActions] = useState<Action[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
@@ -25,7 +28,8 @@ export default function SearchProvider({ children }: { children: ReactNode }) {
 
     async function loadDocuments() {
       try {
-        const response = await fetch(siteMetadata.search.kbarConfig.searchDocumentsPath, {
+        if (!searchDocumentsPath) return
+        const response = await fetch(searchDocumentsPath, {
           signal: controller.signal,
         })
         if (!response.ok) throw new Error('Failed to load search index')
@@ -50,7 +54,7 @@ export default function SearchProvider({ children }: { children: ReactNode }) {
 
     loadDocuments()
     return () => controller.abort()
-  }, [router])
+  }, [router, searchDocumentsPath])
 
   return (
     <KBarProvider>

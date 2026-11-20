@@ -1,5 +1,3 @@
-import Image from '@/components/Image'
-import { allAuthors } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
@@ -9,21 +7,10 @@ import NewsletterForm from 'pliny/ui/NewsletterForm'
 const MAX_DISPLAY = 5
 
 export default function Home({ posts }) {
-  const author = allAuthors.find((entry) => entry.slug === 'default')
-
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="flex items-center gap-4 pt-6 pb-8 sm:gap-6">
-          {author?.avatar && (
-            <Image
-              src={author.avatar}
-              alt={author.name}
-              width={96}
-              height={96}
-              className="h-16 w-16 shrink-0 rounded-full object-cover sm:h-24 sm:w-24"
-            />
-          )}
+        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h2 className="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
           </h2>

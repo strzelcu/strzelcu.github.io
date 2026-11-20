@@ -1,6 +1,6 @@
 ---
 name: add-blog-post
-description: Use to prepare, add, or publish a new article on the Programista na wsi blog in strzelcu/strzelcu.github.io.
+description: Use to prepare, add, update, or publish a new article on the Programista na wsi blog in strzelcu/strzelcu.github.io.
 ---
 
 # Add a blog post
@@ -10,4 +10,6 @@ description: Use to prepare, add, or publish a new article on the Programista na
 3. Check the tags used in existing articles and reuse relevant tags with their existing spelling and capitalization. If you propose a new tag, get explicit approval from the user before adding it to an article.
 4. Put supplied images under public/static/images/ in a folder for the post. Reference each image from its section with descriptive alt text and confirm the file exists. If the author is still providing images, wait before publishing.
 5. Check the changed paths and run yarn lint and EXPORT=1 UNOPTIMIZED=1 yarn build where available. Confirm the build exports the article route and includes its images.
-6. Follow the repository's commits skill. When publication is requested and the post is ready, commit the article and its images together on main using the repository's normal workflow. Check that the GitHub Pages workflow succeeds, then open the live article and verify its images before reporting the URL.
+6. Follow the repository's commits skill. When publication is requested and the post is ready, commit the article and its images together on main using the repository's normal workflow.
+
+7. After every published blog change, including edits to text, images, links, or tags, wait for the GitHub Pages deployment to succeed. Open the affected pages on https://strzelcu.github.io and confirm that the specific changes are visible in production. Report completion only after this live check. If deployment or verification is blocked, report what remains unconfirmed and why.

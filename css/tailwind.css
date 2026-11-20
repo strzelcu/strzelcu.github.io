@@ -50,6 +50,36 @@
   --z-80: 80;
 }
 
+/* Dark colors echo the cyan and magenta mark on the violet social banner. */
+.dark {
+  --color-gray-100: #f4edfd;
+  --color-gray-200: #e6dbf4;
+  --color-gray-300: #d6c9e7;
+  --color-gray-400: #c5b6d8;
+  --color-gray-500: #ab98c4;
+  --color-gray-600: #79668f;
+  --color-gray-700: #4b3665;
+  --color-gray-800: #291940;
+  --color-gray-900: #1c112d;
+  --color-gray-950: #120a20;
+  --color-primary-400: #ff83dd;
+  --color-primary-500: #49dff5;
+  --color-primary-600: #ff83dd;
+}
+
+.dark .prose-invert {
+  --tw-prose-invert-pre-bg: var(--color-gray-900);
+}
+
+.dark .prose :where(code):not(pre code) {
+  color: #dfa7fa;
+}
+
+.dark ::selection {
+  color: var(--color-gray-950);
+  background-color: var(--color-primary-400);
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still

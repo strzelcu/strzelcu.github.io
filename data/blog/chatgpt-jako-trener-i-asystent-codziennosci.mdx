@@ -1,0 +1,93 @@
+---
+title: 'ChatGPT jako trener i asystent codzienności, czyli mój eksperyment z organizacją dnia'
+date: '2026-11-20'
+tags: ['ChatGPT', 'AI', 'organizacja dnia']
+draft: false
+summary: 'Jak wykorzystuję projekt w ChatGPT do planowania treningów i dopasowywania codziennych obowiązków do tego, jak naprawdę przebiega dzień.'
+---
+
+Praca, opieka nad synem, obowiązki domowe i trochę czasu dla siebie. Od kiedy zostałem ojcem, organizacja dnia wymaga ode mnie większej elastyczności. Nawet dobrze przygotowany plan potrafi zmienić się po jednej nieprzespanej nocy.
+
+Chciałem przy tym wrócić do regularnych treningów. Nie potrzebowałem rozbudowanego programu ani kolejnej aplikacji do odhaczania zadań. Zależało mi na czymś, co pomoże dopasować aktywność do rzeczywistego przebiegu dnia.
+
+Postanowiłem wykorzystać ChatGPT. Początkowo miał być przede wszystkim osobistym trenerem, ale z czasem eksperyment rozwinął się w szerszy projekt organizacji codzienności.
+
+Jako programista zacząłem też patrzeć na niego od strony technicznej. Interesowało mnie, jak daleko można dojść, korzystając z instrukcji, historii rozmów i modelu językowego, bez pisania osobnej aplikacji.
+
+## Rozpocząłem od treningów
+
+Inspiracją do projektu była dyscyplina Mariusza Pudzianowskiego. Nie chodziło mi jednak o naśladowanie jego treningów. Chciałem przenieść do swojej codzienności przede wszystkim regularność i konsekwencję.
+
+Do dyspozycji mam orbitrek, bieżnię i mogę robić ćwiczenia z ciężarem własnego ciała. Opcjonalnie mogę też wykorzystać gumy oporowe. Taki zestaw wystarcza na początek, szczególnie gdy najważniejszym celem jest wyrobienie nawyku.
+
+Zacząłem od prostych treningów. Nie były to spektakularne wyniki. Dla mnie ważniejsze było to, że zacząłem gromadzić historię rzeczywiście wykonanych aktywności. Pisałem też, o której wstaję i jak wygląda moja codzienność.
+
+Plan ma to do siebie, że zawsze można go zmienić, i rozmowa z czatem bardzo w tym pomaga.
+
+## Dzień nie zaczyna się zawsze tak samo
+
+W pierwszych tygodniach zauważyłem, że sam plan treningowy to za mało. To, czy mam siłę ćwiczyć, zależy przecież od tego, co działo się wcześniej.
+
+Pracuję zwykle od 8:00 do 16:00. W nocy wstaję, żeby nakarmić syna. Czasami po karmieniu udaje mi się jeszcze zasnąć, innym razem dzień zaczyna się znacznie wcześniej, niż zakładałem.
+
+Zacząłem więc prowadzić osobne konwersacje dla kolejnych dni. Każda otrzymuje datę i nazwę dnia tygodnia.
+
+![Lista rozmów w projekcie „Organizacja dnia” z datami i nazwami dni tygodnia](/static/images/chatgpt-organizacja-dnia/rozmowy.jpg)
+
+Rano zapisuję godzinę pobudki, informacje o śnie i samopoczucie. W ciągu dnia dodaję godziny pracy, wykonane obowiązki i aktywności. Wieczorem informuję, czy udało mi się zrobić trening i jak minął czas z rodziną.
+
+Nie trzymam się przy tym określonego formularza. Czasami wpisuję kilka zdań, a czasami tylko krótką informację, że skończyłem pracę albo właśnie położyłem syna spać.
+
+ChatGPT ma na podstawie tych wiadomości aktualizować obraz dnia i proponować następny sensowny krok.
+
+![Poranna rozmowa, w której ChatGPT podsumowuje sen i proponuje przesunięcie treningu na popołudnie](/static/images/chatgpt-organizacja-dnia/poranna-rozmowa.jpg)
+
+Zależało mi szczególnie na tym, żeby mieć kompana do organizacji codzienności. Prostego asystenta, który wie, kiedy czego potrzebuję. Chcę wiedzieć, co warto zrobić teraz.
+
+## Reguły ważniejsze niż motywacyjne hasła
+
+Szybko przekonałem się, że samo polecenie „bądź moim osobistym trenerem” nie wystarczy.
+
+Model potrafi przygotować plan ćwiczeń, ale nie zna automatycznie moich ograniczeń, priorytetów, codzienności ani oczekiwanego sposobu współpracy.
+
+Im więcej danych wprowadzałem do konwersacji, tym lepiej dostosowane były plany i odpowiedzi. Opisywałem swoją standardową organizację dnia, dostępny sprzęt, tygodniowy plan treningowy i sposób prowadzenia ćwiczeń. Dodałem też zasady dotyczące regeneracji, pracy i życia rodzinnego.
+
+Najważniejsza była kolejność priorytetów. Najpierw zdrowie i sen, później rodzina, praca, aktywność fizyczna oraz pozostałe obowiązki i zainteresowania.
+
+Chciałem uniknąć sytuacji, w której asystent będzie zachęcał mnie do treningu tylko dlatego, że przewiduje go harmonogram.
+
+Dla aplikacji liczącej kolejne dni aktywności mogłoby to oznaczać przerwanie serii. W moim projekcie taka decyzja o przerwie nie ma znaczenia, bo plan jest dostosowany do mnie.
+
+Nie zależy mi na realizacji planu za wszelką cenę. Chcę utrzymywać regularność w dłuższym okresie.
+
+## Co dzieje się pod spodem?
+
+Od strony technicznej projekt jest dość prosty. Nie zbudowałem osobnego backendu ani bazy danych. Korzystam z projektu w ChatGPT, jego instrukcji oraz dostępnego kontekstu wcześniejszych rozmów. Tak jak w moich poprzednich eksperymentach.
+
+Można wyróżnić trzy najważniejsze elementy.
+
+Pierwszym są instrukcje projektowe. Pełnią funkcję konfiguracji zachowania asystenta. Opisują moje cele, ograniczenia i reguły, którymi powinien kierować się podczas przygotowywania odpowiedzi.
+
+![Instrukcje projektu określające sposób prowadzenia dziennika i kolejność priorytetów](/static/images/chatgpt-organizacja-dnia/instrukcje.jpg)
+
+Drugim są dzienne konwersacje. Traktuję je jak dziennik zdarzeń. Każda informacja o rozpoczęciu pracy, wykonanym treningu czy jakości snu uzupełnia historię projektu.
+
+Trzecim jest sam model językowy. Interpretuje wypowiedzi, korzysta z dostępnego kontekstu i przygotowuje rekomendacje.
+
+Nie jest to jednak klasyczna aplikacja z deterministyczną logiką biznesową. Model nie wykonuje dokładnie tego samego algorytmu przy każdej odpowiedzi. Dodatkowo nie ma gwarancji, że zawsze otrzyma pełną historię wszystkich konwersacji. To istotne ograniczenie, ale dla ostatecznego efektu nie ma to znaczenia. To po prostu działa.
+
+Na razie traktuję to rozwiązanie jako eksperyment z konwersacyjnym interfejsem do codziennych decyzji.
+
+## Kilka tygodni później
+
+Po kilku tygodniach eksperymentu mam historię treningów, godzin pracy i codziennych aktywności. Wiem też więcej o tym, czego oczekuję od takiego asystenta.
+
+Najbardziej odpowiada mi prostota całego rozwiązania i elastyczność dopasowana do mojej osobowości i mojej codzienności.
+
+Mogę rano napisać, jak spałem. Po pracy poinformować, że skończyłem swoje obowiązki. Wieczorem poprosić o trening albo zdecydować, że dzisiaj odpoczywam.
+
+Nie muszę przy tym przełączać się między kilkoma aplikacjami.
+
+Projekt nadal rozwijam. Chciałbym lepiej analizować regularność treningów, obserwować wpływ snu na aktywność i z czasem sprawdzić, czy warto dołożyć trwały zapis danych.
+
+Na razie wystarcza mi rozwiązanie, które pomaga porządkować dzień i przypomina o tym, co jest dla mnie ważne. Technologia ma ułatwiać mi codzienność, a nie dokładać kolejne obowiązki do wykonania.

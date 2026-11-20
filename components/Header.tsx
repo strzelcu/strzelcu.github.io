@@ -18,11 +18,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="mr-3">
             <Image
-              src="/static/images/business-avatar.jpg"
+              src="/static/images/header-logo.webp"
               alt=""
               width={48}
               height={48}
-              className="h-12 w-12 rounded-full object-cover"
+              className="h-12 w-12 object-contain"
             />
           </div>
           {typeof siteMetadata.headerTitle === 'string' ? (

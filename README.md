@@ -5,13 +5,13 @@ Personal website and blog of Tomasz Strzelecki, available exclusively at **[http
 ## Pages and projects
 
 - [Blog](https://strzelcu.github.io/blog): MDX posts, tags, and search.
-- [Projects](https://strzelcu.github.io/projects): the “Programista na Wsi” YouTube channel, with a YouTube badge on its artwork, and [Szczedrzyk Dash](https://strzelcu.github.io/szczedrzyk/), a local weather and environmental dashboard with a generated cover illustration.
+- [Projects](https://strzelcu.github.io/projects) links to the dashboard catalogue for Ozimek and its 13 villages. [Ozimek municipality dashboards](https://strzelcu.github.io/gmina-ozimek/)
 - [O mnie](https://strzelcu.github.io/about): a short biography, GitHub profile photo, the title “Macro Data Refiner”, and contact links. No workplace is displayed.
 - [CV](https://strzelcu.github.io/resume/): a separate site maintained in the [resume repository](https://github.com/strzelcu/resume). The About page links to it and states that I am not currently looking for work.
 
 Contact: [mlody_analog3f@icloud.com](mailto:mlody_analog3f@icloud.com).
 
-The blog lives in the root of `strzelcu.github.io`. The `/resume/` and `/szczedrzyk/` sites are published independently from their own repositories.
+The blog lives in the root of `strzelcu.github.io`. This repository publishes the dashboard catalogue at `/gmina-ozimek/` and the Szczedrzyk redirect at `/szczedrzyk/`. The `/resume/` site is published independently. [Dashboard source](https://github.com/strzelcu/gmina-ozimek-dash)
 
 ## Development and editing
 
@@ -43,6 +43,8 @@ Search uses kbar with local Polish-language components in `components/SearchProv
 ## Deployment and updates
 
 `.github/workflows/pages.yml` builds and deploys on pushes to `main` or a manual run. It uses Node.js 24, immutable Yarn installation, and `EXPORT=1`, `UNOPTIMIZED=1`, plus the GitHub Pages `BASE_PATH`. The resulting `out/` directory is published as static files. In the repository's GitHub Pages settings, the source is **GitHub Actions**. No custom domain is configured; the production URL is `https://strzelcu.github.io`, with an empty root base path. `siteUrl` and `siteRepo` in `data/siteMetadata.js` point to that URL and this repository. The legacy `_config.yml` is not used by this Next.js workflow. Webpack is selected explicitly for Contentlayer and SVG-loader compatibility with Next.js 16. ESLint runs separately because Next.js no longer provides `next lint`.
+
+The workflow checks out a pinned commit of `strzelcu/gmina-ozimek-dash`, validates the locality configurations, and runs unit and Playwright tests. It adds the tested export to `out/gmina-ozimek/` and copies the source redirect to `out/szczedrzyk/index.html` before publishing. Pull requests check the export without deploying it. Update the pinned commit in a pull request to release changes to the dashboards. [Pages workflow](.github/workflows/pages.yml)
 
 Direct versions are pinned in `package.json`; `yarn.lock` records the complete resolved graph. Run `yarn up <package>@latest`, check peer requirements, then lint, type-check and rebuild before committing both files. ESLint **9.39.5** and TypeScript **6.0.3** are the newest releases in the ranges supported by the current lint integrations; ESLint 10 and TypeScript 7 are excluded. Pliny's optional Algolia/DocSearch integration still declares older React peer ranges; the site uses kbar instead.
 

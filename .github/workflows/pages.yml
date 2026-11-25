@@ -49,8 +49,8 @@ jobs:
       - name: Check out the approved dashboard source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
-          repository: strzelcu/szczedrzyk
-          ref: b300655dbf876c1411d60db3b716df09fac4273e
+          repository: strzelcu/gmina-ozimek-dash
+          ref: 89d34e46d2e940e8c60fe01d4bcf80e12da12d74
           path: dashboard-source
           persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
@@ -88,11 +88,12 @@ jobs:
           name: dashboard-test-results-${{ github.run_attempt }}
           path: dashboard-source/test/test-results/
           if-no-files-found: ignore
-      - name: Add the tested dashboards to the site export
+      - name: Add the dashboard catalogue and legacy redirect to the site export
         run: |
           target="out${DASHBOARD_BASE_PATH}"
-          mkdir "$target"
+          mkdir "$target" out/szczedrzyk
           cp -a dashboard-source/test/dist/. "$target"
+          cp dashboard-source/redirect/index.html out/szczedrzyk/index.html
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
         if: github.event_name != 'pull_request'
         with:

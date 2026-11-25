@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           repository: strzelcu/gmina-ozimek-dash
-          ref: 89d34e46d2e940e8c60fe01d4bcf80e12da12d74
+          ref: 55f695eedb9b9757b9ffb63f98bd12826a95b630
           path: dashboard-source
           persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
@@ -59,40 +59,40 @@ jobs:
           cache: npm
           cache-dependency-path: |
             dashboard-source/package-lock.json
-            dashboard-source/test/package-lock.json
+            dashboard-source/dashboard/package-lock.json
       - name: Install and validate the dashboards
         working-directory: dashboard-source
         run: |
           npm ci
-          npm ci --prefix test
+          npm ci --prefix dashboard
           node --test tests/*.test.ts
-          npm run check --prefix test
+          npm run check --prefix dashboard
       - name: Fetch dashboard data snapshots
         if: github.event_name != 'pull_request'
         working-directory: dashboard-source
-        run: npm run data --prefix test
+        run: npm run data --prefix dashboard
       - name: Build the locality dashboards
         working-directory: dashboard-source
-        run: npm run build --prefix test
+        run: npm run build --prefix dashboard
       - name: Install Chromium for Playwright
-        working-directory: dashboard-source/test
+        working-directory: dashboard-source/dashboard
         run: npx playwright install --with-deps --only-shell chromium
       - name: Test the locality dashboards
         id: responsive
         working-directory: dashboard-source
-        run: npm run test:responsive --prefix test
+        run: npm run test:responsive --prefix dashboard
       - name: Save browser test results on failure
         if: failure() && steps.responsive.outcome == 'failure'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: dashboard-test-results-${{ github.run_attempt }}
-          path: dashboard-source/test/test-results/
+          path: dashboard-source/dashboard/test-results/
           if-no-files-found: ignore
       - name: Add the dashboard catalogue and legacy redirect to the site export
         run: |
           target="out${DASHBOARD_BASE_PATH}"
           mkdir "$target" out/szczedrzyk
-          cp -a dashboard-source/test/dist/. "$target"
+          cp -a dashboard-source/dashboard/dist/. "$target"
           cp dashboard-source/redirect/index.html out/szczedrzyk/index.html
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
         if: github.event_name != 'pull_request'

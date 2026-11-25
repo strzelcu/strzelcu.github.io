@@ -3,20 +3,25 @@ name: GitHub Pages
 on:
   push:
     branches: main
+  pull_request:
+    branches: main
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: 'pages'
-  cancel-in-progress: false
+  group: ${{ github.event_name == 'pull_request' && format('pages-pr-{0}', github.event.pull_request.number) || 'pages' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    env:
+      DASHBOARD_BASE_PATH: /gmina-ozimek/
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       - run: corepack enable
@@ -25,6 +30,7 @@ jobs:
           node-version: '24'
           cache: yarn
       - id: configurepages
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
       - name: Restore cache
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
@@ -40,12 +46,64 @@ jobs:
           EXPORT: 1
           UNOPTIMIZED: 1
           BASE_PATH: ${{ steps.configurepages.outputs.base_path }}
+      - name: Check out the approved dashboard source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: strzelcu/szczedrzyk
+          ref: cb5f577bfa9a52c074a1ef30e171518e87461d3a
+          path: dashboard-source
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: |
+            dashboard-source/package-lock.json
+            dashboard-source/test/package-lock.json
+      - name: Install and validate the dashboards
+        working-directory: dashboard-source
+        run: |
+          npm ci
+          npm ci --prefix test
+          node --test tests/*.test.ts
+          npm run check --prefix test
+      - name: Fetch dashboard data snapshots
+        if: github.event_name != 'pull_request'
+        working-directory: dashboard-source
+        run: npm run data --prefix test
+      - name: Build the locality dashboards
+        working-directory: dashboard-source
+        run: npm run build --prefix test
+      - name: Install Chromium for Playwright
+        working-directory: dashboard-source/test
+        run: npx playwright install --with-deps --only-shell chromium
+      - name: Test the locality dashboards
+        id: responsive
+        working-directory: dashboard-source
+        run: npm run test:responsive --prefix test
+      - name: Save browser test results on failure
+        if: failure() && steps.responsive.outcome == 'failure'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dashboard-test-results-${{ github.run_attempt }}
+          path: dashboard-source/test/test-results/
+          if-no-files-found: ignore
+      - name: Add the tested dashboards to the site export
+        run: |
+          target="out${DASHBOARD_BASE_PATH}"
+          mkdir "$target"
+          cp -a dashboard-source/test/dist/. "$target"
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
+        if: github.event_name != 'pull_request'
         with:
           path: ./out
 
   # Deployment job
   deploy:
+    if: github.event_name != 'pull_request'
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

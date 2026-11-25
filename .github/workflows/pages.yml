@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           repository: strzelcu/szczedrzyk
-          ref: cb5f577bfa9a52c074a1ef30e171518e87461d3a
+          ref: b300655dbf876c1411d60db3b716df09fac4273e
           path: dashboard-source
           persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1

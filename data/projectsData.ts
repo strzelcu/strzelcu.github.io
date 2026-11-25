@@ -7,10 +7,11 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'Szczedrzyk Dash',
-    description: `Lokalny dashboard dla Szczedrzyka: pogoda, jakość powietrza, poziomy wody, ostrzeżenia IMGW i harmonogram odbioru odpadów — najważniejsze informacje o okolicy w jednym miejscu.`,
+    title: 'Dashboardy gminy Ozimek',
+    description:
+      'Pogoda, jakość powietrza, stany wód, ostrzeżenia IMGW i terminy odbioru odpadów dla Ozimka i 13 sołectw.',
     imgSrc: '/static/images/szczedrzyk-dash.png',
-    href: 'https://strzelcu.github.io/szczedrzyk/',
+    href: 'https://strzelcu.github.io/gmina-ozimek/',
   },
 ]
 

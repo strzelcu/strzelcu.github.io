@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           repository: strzelcu/gmina-ozimek-dash
-          ref: 2bd2c43d2ca8ebfab181d223138b234ba9f166cc
+          ref: b26be1e55fa4ef9341c3f47f240d1142dbb9db92
           path: dashboard-source
           persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1

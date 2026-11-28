@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           repository: strzelcu/gmina-ozimek-dash
-          ref: e0283c3eed1a5b0d373e25421fb75c3998c58a89
+          ref: 65b352ee6ec408ca1d789c92191a978fb125a98e
           path: dashboard-source
           persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
@@ -74,6 +74,12 @@ jobs:
       - name: Build the locality dashboards
         working-directory: dashboard-source
         run: npm run build --prefix dashboard
+      - name: Verify waste calendar imports
+        working-directory: dashboard-source
+        run: |
+          python3 -m venv "$RUNNER_TEMP/ozimek-khal"
+          "$RUNNER_TEMP/ozimek-khal/bin/python" -m pip install 'khal==0.14.1'
+          KHAL_BIN="$RUNNER_TEMP/ozimek-khal/bin/khal" npm run test:calendars --prefix dashboard
       - name: Install Chromium for Playwright
         working-directory: dashboard-source/dashboard
         run: npx playwright install --with-deps --only-shell chromium
